@@ -14,7 +14,7 @@
     
     
       
-        <title>Viz - opskrift</title>
+        <title>Enter pipe - opskrift</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#src.viz" class="md-skip">
+        <a href="#src.enter_pipe" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Viz
+              Enter pipe
             
           </span>
         </div>
@@ -327,11 +327,54 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../enter_pipe/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Enter pipe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Enter pipe
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#src.enter_pipe" class="md-nav__link">
+    src.enter_pipe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.enter_pipe.EnterPipe" class="md-nav__link">
+    EnterPipe
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -411,47 +454,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Viz
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../viz/" class="md-nav__link">
         Viz
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#src.viz" class="md-nav__link">
-    src.viz
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -591,8 +598,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#src.viz" class="md-nav__link">
-    src.viz
+  <a href="#src.enter_pipe" class="md-nav__link">
+    src.enter_pipe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.enter_pipe.EnterPipe" class="md-nav__link">
+    EnterPipe
   </a>
   
 </li>
@@ -609,17 +623,76 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opskrift/opskrift/edit/master/docs/reference/viz.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/opskrift/opskrift/edit/master/docs/reference/enter_pipe.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Viz</h1>
+                  <h1>Enter pipe</h1>
                 
                 <div class="doc doc-object doc-module">
 
-<a id="src.viz"></a>
+<a id="src.enter_pipe"></a>
     <div class="doc doc-contents first">
+
+      <p>Modification of the https://github.com/JulienPalard/Pipe project
+to support arbitrary objects as input.</p>
+<p>See https://stackoverflow.com/a/69790644.</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="src.enter_pipe.EnterPipe" class="doc doc-heading">
+        <code>
+EnterPipe        </code>
+
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Processing using pipes.
+Wrap input value in <code>EnterPipe</code>, chain processing functions,
+then mark the end of the pipe using <code>ExitPipe</code>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>obj</code></td>
+        <td><code>Any</code></td>
+        <td><p>The wrapped pipe input object.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Examples:</strong></p>
+    
+      <pre><code>xs = np.array([1, 2, 3])
+ys = EnterPipe(xs) | (lambda x: 2 * x) | np.median | ExitPipe
+print(ys) # 4.0
+</code></pre>
 
 
 
@@ -629,6 +702,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
 
 
 
@@ -661,7 +748,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../train_utils/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Train utils" rel="prev">
+        <a href="../dict_utils/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Dict utils" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -670,20 +757,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Train utils
+              Dict utils
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../template/_ADT/" class="md-footer__link md-footer__link--next" aria-label="Next:  ADT" rel="next">
+        <a href="../gpu_utils/" class="md-footer__link md-footer__link--next" aria-label="Next: Gpu utils" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-               ADT
+              Gpu utils
             </div>
           </div>
           <div class="md-footer__button md-icon">
